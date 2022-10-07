@@ -12,17 +12,28 @@
 
 <body>
     <section class="conatiner">
-        <h1 class="title"> </h1>
+        <h2 class="title">CockTails Drinks</h2>
+        <a href="">Icono Carrito</a>
+
+        <div class="card" style="width: 25rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 25rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
         <button type="button" class="btn btn-primary btn-sm">Cocktails</button>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">strDrink</th>
-                    <th scope="col">strAlcoholic</th>
-                    <th scope="col">strImageSource</th>
-                </tr>
-            </thead>
-        </table>
 
         <div class="card">
             <img src="..." class="card-img-top" alt="...">
@@ -65,6 +76,27 @@
                     console.log(data[json])
 
                     console.log(strDrink)
+
+                    const img = document.createElement("img")
+                    img.src = strImageSource
+
+                    const card_title = document.createElement("h5")
+                    card_title = strDrink
+
+                    const alcoholic = document.createElement("h6")
+                    alcoholic = strAlcoholic
+
+                    const div_body = document.createElement("div")
+                    div_body.class = "card-body"
+                    div_body.appendChild(card_title)
+                    div_body.appendChild(alcoholic)
+
+                    const div = document.createElement("div");
+                    div.class = "card"
+                    div.appendChild(img)
+                    div.appendChild(div_body)
+
+                    document.body.appendChild(div)
                 }
             }
 

@@ -3,3 +3,8 @@ function getData() {
         .then((response) => response.json())
         .then((data) => fillTable(data));
 }
+
+function cargarDatos() {
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+        .then((response) => response.json())
+}
