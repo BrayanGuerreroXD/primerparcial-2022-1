@@ -4,7 +4,7 @@ function fillTable() {
     for (let json in localStorage) {
         let object = localStorage[json]
         let strDrink = object.strDrink
-        let strPrice = "$ 20.000"
+        let strPrice = 20000
 
         let row = table.insertRow()
 
